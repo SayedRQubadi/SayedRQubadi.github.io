@@ -1,1 +1,247 @@
-<h1>Hello World!</h1>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <style>
+    :root{
+      --bg: #0b1020;
+      --card: rgba(255,255,255,0.06);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.72);
+      --line: rgba(255,255,255,0.14);
+      --accent: #7dd3fc; /* light cyan */
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 15% 10%, rgba(125, 211, 252, 0.25), transparent 60%),
+        radial-gradient(900px 600px at 85% 20%, rgba(167, 139, 250, 0.22), transparent 55%),
+        radial-gradient(900px 600px at 30% 90%, rgba(34, 197, 94, 0.10), transparent 55%),
+        var(--bg);
+      min-height: 100vh;
+      line-height: 1.55;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(980px, 92vw);
+      margin: 0 auto;
+      padding: 48px 0 64px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 22px;
+      align-items: center;
+      padding: 26px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      backdrop-filter: blur(10px);
+    }
+
+    .photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 999px;
+      border: 2px solid rgba(255,255,255,0.22);
+      overflow: hidden;
+      background: rgba(255,255,255,0.08);
+      display: grid;
+      place-items: center;
+    }
+
+    /* Replace the src in HTML OR keep this as a fallback if image fails */
+    .photo span {
+      color: var(--muted);
+      font-size: 12px;
+      padding: 0 10px;
+      text-align: center;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .headline h1 {
+      margin: 0 0 6px;
+      font-size: clamp(28px, 3vw, 40px);
+      letter-spacing: 0.2px;
+    }
+
+    .headline .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+    }
+
+    main {
+      margin-top: 22px;
+      display: grid;
+      gap: 18px;
+    }
+
+    section {
+      padding: 22px 26px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      backdrop-filter: blur(10px);
+    }
+
+    section h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      letter-spacing: 0.2px;
+    }
+
+    section p {
+      margin: 0;
+      color: var(--text);
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--line);
+      margin: 14px 0;
+    }
+
+    .research-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--text);
+    }
+
+    .research-list li {
+      margin: 10px 0;
+    }
+
+    footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+      }
+      .headline .meta {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Header with photo next to name + email -->
+    <header>
+      <div class="photo">
+        <!-- Replace "your-photo.jpg" with your image file (same folder as this HTML),
+             or use a URL (https://...) -->
+        <img src="your-photo.jpg" alt="Photo of Your Name" onerror="this.remove(); this.parentElement.innerHTML='<span>Add your photo: <br>replace <b>your-photo.jpg</b></span>';">
+      </div>
+
+      <div class="headline">
+        <h1>Your Name</h1>
+
+        <div class="meta">
+          <div class="pill" title="Email">
+            <!-- mailto link -->
+            <span>✉</span>
+            <a href="mailto:your.email@example.com">your.email@example.com</a>
+          </div>
+
+          <!-- Optional extras you can keep or delete -->
+          <div class="pill" title="Location">
+            <span>📍</span>
+            <span>Your City, Country</span>
+          </div>
+          <div class="pill" title="Links">
+            <span>🔗</span>
+            <a href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+            <span style="opacity:.6">•</span>
+            <a href="#" target="_blank" rel="noreferrer">Google Scholar</a>
+            <span style="opacity:.6">•</span>
+            <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Bio -->
+      <section id="bio">
+        <h2>Bio</h2>
+        <div class="divider"></div>
+        <p>
+          Write your bio here. Example: I’m a [your role/degree] focused on [your interests].
+          I enjoy working at the intersection of [Area A] and [Area B], with a particular interest in
+          [specific topic]. I’m currently based in [location] and looking for opportunities to
+          collaborate on projects related to [theme].
+        </p>
+      </section>
+
+      <!-- Research -->
+      <section id="research">
+        <h2>Research</h2>
+        <div class="divider"></div>
+        <p>
+          Brief overview of your research direction. Example: My current work explores
+          [research theme], with goals to improve [metric/outcome] in [domain/context].
+        </p>
+
+        <ul class="research-list">
+          <li><strong>Project / Topic 1:</strong> One sentence on what you’re doing and why it matters.</li>
+          <li><strong>Project / Topic 2:</strong> Methods, datasets, models, or collaborators you’re working with.</li>
+          <li><strong>Project / Topic 3:</strong> Results so far, or what you’re aiming to publish/build.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Your Name · Built with HTML/CSS
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
