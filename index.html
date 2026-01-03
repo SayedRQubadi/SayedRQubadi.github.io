@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sayed R Qubadi</title>
+  <title>Sayed Reza Qubadi — Portfolio</title>
   <style>
     :root{
       --bg: #0b1020;
@@ -11,7 +11,7 @@
       --text: rgba(255,255,255,0.92);
       --muted: rgba(255,255,255,0.72);
       --line: rgba(255,255,255,0.14);
-      --accent: #7dd3fc; /* light cyan */
+      --accent: #7dd3fc;
       --shadow: 0 10px 30px rgba(0,0,0,0.35);
       --radius: 18px;
     }
@@ -63,7 +63,6 @@
       place-items: center;
     }
 
-    /* Replace the src in HTML OR keep this as a fallback if image fails */
     .photo span {
       color: var(--muted);
       font-size: 12px;
@@ -172,9 +171,10 @@
     <!-- Header with photo next to name + email -->
     <header>
       <div class="photo">
-        <!-- Replace "your-photo.jpg" with your image file (same folder as this HTML),
-             or use a URL (https://...) -->
-        <img src="your-photo.jpg" alt="Photo of Your Name" onerror="this.remove(); this.parentElement.innerHTML='<span>Add your photo: <br>replace <b>your-photo.jpg</b></span>';">
+        <!-- Put your photo file in the same folder and name it "sayed-photo.jpg",
+             or change the src to your filename/URL -->
+        <img src="sayed-photo.jpg" alt="Photo of Sayed Reza Qubadi"
+             onerror="this.remove(); this.parentElement.innerHTML='<span>Add your photo:<br>replace <b>sayed-photo.jpg</b></span>';">
       </div>
 
       <div class="headline">
@@ -182,23 +182,14 @@
 
         <div class="meta">
           <div class="pill" title="Email">
-            <!-- mailto link -->
             <span>✉</span>
-            <a href="mailto:srezaqubadi@gmail.com">srezaqubadi@gmail.com</a>
+            <a href="mailto:sayed.qubadi.761@my.csun.edu">sayed.qubadi.761@my.csun.edu</a>
           </div>
 
-          <!-- Optional extras you can keep or delete -->
-          <div class="pill" title="Location">
-            <span>📍</span>
-            <span>Simi Valley, USA</span>
-          </div>
-          <div class="pill" title="Links">
-            <span>🔗</span>
-            <a href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-            <span style="opacity:.6">•</span>
-            <a href="#" target="_blank" rel="noreferrer">Google Scholar</a>
-            <span style="opacity:.6">•</span>
-            <a href="#" target="_blank" rel="noreferrer">GitHub</a>
+          <!-- Optional (edit or remove) -->
+          <div class="pill" title="Affiliation">
+            <span>🎓</span>
+            <span>CSUN · B.S. Computer Science (Aug 2025)</span>
           </div>
         </div>
       </div>
@@ -210,10 +201,9 @@
         <h2>Bio</h2>
         <div class="divider"></div>
         <p>
-          I earned my B.S. in computer science from CSUN in August 2025. I’m currently based in Simi Valley, CA,
-          and looking for opportunities to pursue graduate studies on the intersection of game theory and AI. 
-          Specifically, I'm interested in building reliable tool-using agents that can reason, solve, and validate 
-          queries on game-theory problems across multiple libraries.
+          I earned my B.S. in Computer Science from CSUN in August 2025. I’m an immigrant and a
+          first-generation college student, and I’m interested in building reliable AI systems that
+          can reason and act correctly in complex settings.
         </p>
       </section>
 
@@ -222,15 +212,29 @@
         <h2>Research</h2>
         <div class="divider"></div>
         <p>
-          My current work with Dr. Raissi from UCR explores an agentic AI system that
-          call works with PyGambit library and OpenAI's nano model to map natural-language
-          queries to action sequences that yield a validated result.
+          My current research interests lie at the intersection of game theory and AI, with a focus on
+          reliability in tool-using agents. I’m especially interested in:
         </p>
+
+        <ul class="research-list">
+          <li>
+            <strong>Tool-use grounding:</strong> How can an agent reliably map a natural-language query to a
+            valid tool-call sequence across different game theory libraries?
+          </li>
+          <li>
+            <strong>Verification &amp; robustness:</strong> What verification strategies actually reduce
+            hallucination and silent failure?
+          </li>
+          <li>
+            <strong>Benchmark design:</strong> Which benchmark designs best measure reliability and
+            generalization of agents across environments and tasks?
+          </li>
+        </ul>
       </section>
     </main>
 
     <footer>
-      © <span id="year"></span> Sayed Reza Qubadi · Built with HTML/CSS
+      © <span id="year"></span> Sayed Reza Qubadi
     </footer>
 
   </div>
