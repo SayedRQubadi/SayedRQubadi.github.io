@@ -211,10 +211,10 @@
         <h2>Bio</h2>
         <div class="divider"></div>
         <p>
-          I'm interested in building reliable tool-using agents that can reason, solve, and validate
-          queries on game-theory problems across multiple game-theory libraries. I’m currently based
-          in Simi Valley, CA, and looking for opportunities to pursue graduate studies on the 
-          intersection of game theory and AI. I’m an immigrant and a first-generation college student. 
+          I am interested in developing validated, tool-specific datasets for training and evaluating
+          LLM-based agents across game-theoretic libraries. My current work focuses on expanding a 
+          multiple-choice dataset tailored to the PyGambit library, with an emphasis on isolating problems
+          that enforce tool dependence rather than unaided reasoning. 
         </p>
       </section>
 
@@ -223,22 +223,26 @@
         <h2>Research</h2>
         <div class="divider"></div>
         <p>
-          My current research work is to augment an agentic AI system with tools from PyGambit library,
-          and explore:
+          To ensure this, I use pure reasoning models as a validation filter: if a model can correctly
+          answer a question without executing PyGambit, the question is excluded, as it does not probe 
+          tool-dependent reasoning. The resulting dataset is designed to support the development and 
+          evaluation of tool-augmented agents (e.g., Gambit-based agents).
+          Specifically, I investigate:
         </p>
 
         <ul class="research-list">
           <li>
-            <strong>Tool-use grounding:</strong> How can an agent reliably map a natural-language query to a
-            valid tool-call sequence across different game theory libraries?
+            <strong>LLM threshold:</strong> What structural properties characterize games that LLMs can
+            interpret correctly but fail to solve without tool assistance?
           </li>
           <li>
-            <strong>Verification &amp; robustness:</strong> What verification strategies actually reduce
-            hallucination and silent failure?
+            <strong>Verification &amp; robustness:</strong> Which verification strategies, and which classes
+            of LLMs, are most effective at reducing hallucinations and silent failures in tool-depending 
+            reasoning tasks?
           </li>
           <li>
-            <strong>Benchmark design:</strong> Which benchmark designs best measure reliability and
-            generalization of agents across environments and tasks?
+            <strong>Benchmark design:</strong> How should benchmarks be designed to rigorously measure 
+            reliability and generalization of agents across environments and task formulations?
           </li>
         </ul>
       </section>
